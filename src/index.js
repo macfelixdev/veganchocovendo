@@ -28,7 +28,7 @@ class App extends Component {
       totalCoin : 0,
       userAction : null,
       actionMessages : {
-        msgWelcome : "Welcome! Insert coins to start.",
+        msgWelcome : <MessageDiv actionMsg={"Welcome! Insert coins to start."} />,
         msgDispenseItem : null,
         msgInvalid5c : null,
         msgInvalidCoin : null,
@@ -127,7 +127,7 @@ class App extends Component {
   composeMessage(userAction, coinChange, totalCoin){
     // Initialize message object
     let newMessages = {
-      msgWelcome : "Welcome! Insert coins to start.",
+      msgWelcome : null,
       msgDispenseItem : null,
       msgInvalid5c : null,
       msgInvalidCoin : null,
@@ -141,6 +141,7 @@ class App extends Component {
       // Show welcome message
       case "welcome":
       case "coin":
+        newMessages.msgWelcome = <MessageDiv actionMsg={"Welcome! Insert coins to start."} />;
         break;
 
       // Dispense item, change and display exit message.
@@ -148,7 +149,7 @@ class App extends Component {
       case "Caramel":
       case "Hazelnut":
         newMessages.msgWelcome = null;
-        newMessages.msgDispenseItem = <MessageDiv actionMsg={"Here is your " + userAction + ". Enjoy!"} />
+        newMessages.msgDispenseItem = <MessageDiv actionMsg={"Here is your " + userAction + ". Enjoy!"} />;
         if(coinChange > 0 ){
           newMessages.msgDispenseCoin = <MessageDiv actionMsg={"Unused coins returned ($" + coinChange.toFixed(2) + ")."} />;
         }
@@ -238,7 +239,7 @@ class DivMenu extends Component{
   render(){
     return(
       <div class="wrapper wrapper-format">
-        <div id="snack-header">
+        <div class="dispBlock">
           Hey there! The following snacks are available for you to choose from:
         </div>
         <ul>
@@ -265,7 +266,7 @@ class MenuItem extends Component{
     return(
       <li>
         <div class="dispInLine">
-          <button type="button" value={this.props.ButtonValue}  onClick={this.handleSelection2} disabled={(this.props.totalCoin >= this.props.ItemPrice)? false:true}>Select</button>
+          <button class="button" type="button" value={this.props.ButtonValue}  onClick={this.handleSelection2} disabled={(this.props.totalCoin >= this.props.ItemPrice)? false:true}>Select</button>
         </div>
         <div class="dispInLine">
           {this.props.MenuItemDescr}
@@ -306,15 +307,15 @@ class DivCoin extends Component {
   render(){
     return(
       <div class="wrapper wrapper-format">
-        <div class="coin-valid">
+        <div class="coin-valid dispBlock">
           Please insert 10c, 20c, 50c, $1 or $2 coin only.
         </div>
         <div class="coin-meter dispInLine" id="coinMeter">
           Total: ${(this.props.totalCoin).toFixed(2)}
         </div>
         <div class="coin-slot dispInLine">
-          <input type="text" placeholder="Insert Coin" value={this.state.insertedCoin} onChange={this.handleInsertCoin} onKeyUp={this.handleOnEnter}></input>
-          <button type="button" onClick={this.handleEvaluateCoin}>Drop</button>
+          <input type="text" id="coinSlot" placeholder="Insert Coin" value={this.state.insertedCoin} onChange={this.handleInsertCoin} onKeyUp={this.handleOnEnter}></input>
+          <button type="button" id="dropCoin" class="button" onClick={this.handleEvaluateCoin}>Drop</button>
         </div>
       </div>
     );
@@ -338,7 +339,7 @@ class DivCancel extends Component {
           Press 'cancel' if you need to leave and I'll return your unused coins.
         </div>
         <div class="cancel-button dispInLine">
-          <button type="button" onClick={this.handleCancel}>Cancel</button>
+          <button class="button" type="button" onClick={this.handleCancel}>Cancel</button>
         </div>
       </div>
     );
