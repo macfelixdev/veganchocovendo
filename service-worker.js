@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/veganchocovendo/precache-manifest.e59d04569327309c6d23ba914ddf8e49.js"
+  "/veganchocovendo/precache-manifest.3ce8c2cd183cd49f33b43b57961f09a3.js"
 );
 
 workbox.clientsClaim();
