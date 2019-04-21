@@ -1,5 +1,5 @@
 {
-  "main.css": "/veganchocovendo/static/css/main.19900d65.chunk.css",
+  "main.css": "/veganchocovendo/static/css/main.6bc5cd78.chunk.css",
   "main.js": "/veganchocovendo/static/js/main.feac1410.chunk.js",
   "main.js.map": "/veganchocovendo/static/js/main.feac1410.chunk.js.map",
   "runtime~main.js": "/veganchocovendo/static/js/runtime~main.38be3416.js",
@@ -7,7 +7,7 @@
   "static/js/2.373ccd69.chunk.js": "/veganchocovendo/static/js/2.373ccd69.chunk.js",
   "static/js/2.373ccd69.chunk.js.map": "/veganchocovendo/static/js/2.373ccd69.chunk.js.map",
   "index.html": "/veganchocovendo/index.html",
-  "precache-manifest.909bf158e6348fb3bb267cdd09f019f3.js": "/veganchocovendo/precache-manifest.909bf158e6348fb3bb267cdd09f019f3.js",
+  "precache-manifest.6703f9a8861ae52562ad0b35b137f7c3.js": "/veganchocovendo/precache-manifest.6703f9a8861ae52562ad0b35b137f7c3.js",
   "service-worker.js": "/veganchocovendo/service-worker.js",
-  "static/css/main.19900d65.chunk.css.map": "/veganchocovendo/static/css/main.19900d65.chunk.css.map"
+  "static/css/main.6bc5cd78.chunk.css.map": "/veganchocovendo/static/css/main.6bc5cd78.chunk.css.map"
 }
