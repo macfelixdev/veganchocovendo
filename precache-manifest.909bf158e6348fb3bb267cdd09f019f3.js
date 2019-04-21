@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/veganchocovendo/static/js/runtime~main.38be3416.js"
   },
   {
-    "revision": "6fc82271178db257d78a",
+    "revision": "bcaddfb6d707dc017822",
     "url": "/veganchocovendo/static/js/main.feac1410.chunk.js"
   },
   {
@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "/veganchocovendo/static/js/2.373ccd69.chunk.js"
   },
   {
-    "revision": "6fc82271178db257d78a",
-    "url": "/veganchocovendo/static/css/main.69cb51fe.chunk.css"
+    "revision": "bcaddfb6d707dc017822",
+    "url": "/veganchocovendo/static/css/main.19900d65.chunk.css"
   },
   {
-    "revision": "e71e1a560e76c9a3ab512e1a062db7b0",
+    "revision": "87b97f89653a846e64ea1e63581e0e8c",
     "url": "/veganchocovendo/index.html"
   }
 ];
